@@ -1,0 +1,43 @@
+<body>
+
+<h1>MOVIES</h1>
+
+<form method="POST" action="/addmovie">
+    <input type="text" name="title" placeholder="TITLE"/>
+    <input type="text" name="description" placeholder="DESCRIPTION"/>
+    <input type="text" name="genre" placeholder="GENRE"/>
+   
+
+    <button id="Submit">Submit</button>
+</form>
+
+<ul>
+   {{#allmovies}}
+ <li>
+       <b> TITLE -{{title}}</b>
+ </li>
+ <li>
+        Description -{{description}}
+ </li>
+ <li>
+        Genre -{{genre}}
+ </li>
+ 
+   {{/allmovies}}
+</ul>
+
+
+
+
+<script>
+    if ( window.history.replaceState ) {
+        window.history.replaceState( null, null, window.location.href );
+    }
+</script>
+
+</body>
+
+
+
+
+</html>>
